@@ -13,14 +13,14 @@
 </head>
 <body>
     
-    <div class="container">
+    <div class="container"  id="main-registro">
      
         <h1>Registrarse</h1>
         <p>Utilice una cuenta propia de email como nombre de usuario.</p>
         
         <form>
             <div class="form-group">
-                <label for="exampleInputEmail1">Ingrese su email</label>
+                <label for="exampleInputEmail1">Ingrese su email/usuario</label>
                 <input type="email" class="form-control" id="crearEmail" aria-describedby="emailHelp">
                 <small id="emailHelp" class="form-text text-muted">Su mail no será usado para compartir informacion a terceros.</small>
             </div>
@@ -36,11 +36,19 @@
                 <input type="password" class="form-control" id="confirmarPassword" aria-describedby="confirm-password">
                 <small id="confirm-password" class="form-text text-muted">Confirme su password</small>
             </div>
-            
-            <button type="submit" class="btn btn-primary" id="btn-registrarse">Registrarse</button>
+            <div id="registrarse">
+    
+                <button type="submit" class="btn btn-primary" id="btn-registrarse">Registrarse</button>
+                <ul id="registro-errores">
 
+                </ul>
+                
+            </div>
         </form>
-
+        
+    </div>
+    <div id="esExito" class="container oculto">
+        <h2>Te has registrado exitosamente! Ahora podrás loggearte e ingresar a la plataforma.</h2>
     </div>
 
     <!-- jQuery -->
