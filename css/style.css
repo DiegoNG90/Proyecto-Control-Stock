@@ -40,4 +40,15 @@
 }
 .error-texto{
     color: red;
+    list-style: none;
+}
+
+ul{
+    margin-top: 1.5rem;
+}
+
+/* REGISTRO */
+
+#esExito, h2{
+    color: green;
 }
