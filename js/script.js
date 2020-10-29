@@ -3,7 +3,7 @@ console.log("Linkeado al login.html")
 
 const superUsuario = {
     user: "diego@hotmail.com",
-    password: 123456
+    password: "123456"
 }
 
 // const ALLUSERS = [];
@@ -42,29 +42,26 @@ $nodoBotonLogIn.onclick = function (e){
         ALLUSERS.push(JSON.parse(Object.values(localStorage)[i]));
         mails.push(ALLUSERS[i].user)
         pass.push(ALLUSERS[i].password)
-
+    
         //Si coinciden:
-        if ($nodoMail === mails[i] && $nodoPass === pass[i].toString()) {
+        if ($nodoMail === mails[i] && $nodoPass === pass[i]) {
             window.location.href = "index.html";
         }
         else {
             //Chequear si hay errores (li) antes y si hay, eliminarlos, para chequear con 0 li (errores):
-            while($errores.firstChild){
-                $errores.removeChild($errores.firstChild);
-            };
+            chequearYBorrarErrores($errores);
 
             let error = document.createElement("li");
             error.classList.add('error-texto')
             
-            
             $errores.appendChild(error);
             //Si el pass coincide pero el mail no: 
-            if($nodoMail !== mails[i] && $nodoPass === pass[i].toString() ){
+            if($nodoMail !== mails[i] && $nodoPass === pass[i]){
                 error.innerText = "El mail/usuario es incorrecto."
                 $('#inputEmail')[0].className = 'error-input';
                 $('#inputPassword')[0].className = 'form-control';
             }//Si el mail coincide pero el pass no:
-            else if ($nodoMail === mails[i] && $nodoPass !== pass[i].toString()) {
+            else if ($nodoMail === mails[i] && $nodoPass !== pass[i]) {
                 error.innerText = "El password es incorrecto."
                 $('#inputPassword')[0].className = 'error-input';
                 $('#inputEmail')[0].className = 'form-control';
@@ -82,6 +79,43 @@ $nodoBotonLogIn.onclick = function (e){
         }  
     }    
     
+}
+
+function chequearMailExistente(chequearYBorrarErrores, $errores, $nodoMail){
+
+    const ALLUSERS = [];
+    const mails = [];
+    const pass = [];
+
+    for(let i=0; i < Object.values(localStorage).length; i++){
+        ALLUSERS.push(JSON.parse(Object.values(localStorage)[i]));
+        mails.push(ALLUSERS[i].user)
+        pass.push(ALLUSERS[i].password)
+
+        if(mails[i] === $nodoMail){
+            chequearYBorrarErrores($errores);
+
+            
+            let errorRegistro = document.createElement("li");
+            errorRegistro.classList.add('error-texto');
+            errorRegistro.innerText = "El mail/usuario ya está en uso. Ingrese otro mail para registrarse."
+            $('#crearEmail')[0].className = 'error-input';
+
+            $errores.appendChild(errorRegistro);
+            $('#crearPassword')[0].className = 'form-control';
+            $('#confirmarPassword')[0].className = 'form-control';
+            
+            return mails[i];
+            break;
+        }
+    }
+}
+
+function chequearYBorrarErrores(input){
+    //Chequear si hay errores (li) antes y si hay, eliminarlos, para chequear con 0 li (errores):
+    while(input.firstChild){
+        input.removeChild(input.firstChild);
+    };
 }
 
 
