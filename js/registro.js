@@ -45,9 +45,25 @@ $botonRegistro.onclick = function(e){
                 user: `${usuarioNuevo}`,
                 password: `${confirmaContraseñaUNuevo}`
             }
+
+            let existentes = localStorage.getItem('ALLUSERS');
+
+            if (existentes === null) {
+                existentes = [];
+                existentes.push(newUser);
+                let ALLUSERS = localStorage.setItem('ALLUSERS', JSON.stringify(existentes));
+            }else{
+                let ALLUSERS = existentes;
+                ALLUSERS = JSON.parse(ALLUSERS);
+                ALLUSERS.push(newUser);
+                localStorage.setItem('ALLUSERS', JSON.stringify(ALLUSERS));
+            }
             
+
+
+
             //Subo al newUser al LS
-            localStorage.setItem('newUser', JSON.stringify(newUser));
+            // localStorage.setItem('newUser', JSON.stringify(newUser));
             
             $('#main-registro')[0].className = "oculto";
             $('#esExito')[0].classList.remove('oculto');

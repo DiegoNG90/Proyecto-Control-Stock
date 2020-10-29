@@ -6,8 +6,9 @@ const superUsuario = {
     password: "123456"
 }
 
-// const ALLUSERS = [];
-// ALLUSERS.push(superUsuario);
+//SI! AHORA SI!
+let ALLUSERS = [];
+ALLUSERS = JSON.parse(localStorage.getItem('ALLUSERS'));
 
 //Subo el superusario al LS
 localStorage.setItem('superUsuario', JSON.stringify(superUsuario));
