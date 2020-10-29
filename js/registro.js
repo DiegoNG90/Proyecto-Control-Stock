@@ -43,7 +43,7 @@ $botonRegistro.onclick = function(e){
 
             const newUser = {
                 user: `${usuarioNuevo}`,
-                password: Number(`${confirmaContraseñaUNuevo}`)
+                password: `${confirmaContraseñaUNuevo}`
             }
             
             //Subo al newUser al LS
