@@ -1,1 +1,31 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
+.botonAgregar{
+    color: white;
+}
+
+.botonLista{
+    color: white;
+}
+
+.btn-eliminar1{
+    /* display: none; */
+    background-color: red;
+    color: white;
+}
+
+.btn-eliminar2{
+    /* display: none; */
+    background-color: red;
+    color: white;
+}
+
+.btn-eliminar3{
+    /* display: none; */
+    background-color: red;
+    color: white;
+}
