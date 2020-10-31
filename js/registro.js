@@ -91,19 +91,21 @@ function chequearYBorrarErrores(input){
 
 
 function chequearMailExistente(chequearYBorrarErrores, erroresRegistro,usuarioNuevo){
-    const ALLUSERS = [];
+    const ALLUSERS = JSON.parse(localStorage.getItem('ALLUSERS'));
     const mails = [];
     const pass = [];
 
-    for(let i=0; i < Object.values(localStorage).length; i++){
-        ALLUSERS.push(JSON.parse(Object.values(localStorage)[i]));
+    if(ALLUSERS === null){
+        return '';
+    }
+
+    for(let i=0; i < ALLUSERS.length; i++){
         mails.push(ALLUSERS[i].user)
         pass.push(ALLUSERS[i].password)
 
         if(mails[i] === usuarioNuevo){
             chequearYBorrarErrores(erroresRegistro);
 
-            //alert("El usuario ya existe, ingrese otro mail/user.")
             let errorRegistro = document.createElement("li");
             errorRegistro.classList.add('error-texto');
             errorRegistro.innerText = "El mail/usuario ya está en uso. Ingrese otro mail para registrarse."
@@ -112,6 +114,9 @@ function chequearMailExistente(chequearYBorrarErrores, erroresRegistro,usuarioNu
             erroresRegistro.appendChild(errorRegistro);
             $('#crearPassword')[0].className = 'form-control';
             $('#confirmarPassword')[0].className = 'form-control';
+            $('#crearPassword')[0].value = "";
+            $('#confirmarPassword')[0].value = "";
+
             
             return mails[i];
             break;
