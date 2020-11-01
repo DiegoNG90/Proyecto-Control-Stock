@@ -52,3 +52,41 @@ ul{
 #esExito, h2{
     color: green;
 }
+
+.landing{
+    background-image: url(../images/fondo.jpg);
+    width: 100vw;
+    height: 94vh;
+    overflow-x: hidden;
+    
+}
+
+
+#titulo-lading{
+    width: 100%;
+    text-align: center;
+    text-shadow: 0px 0px 12px #ffffff;
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+    font-weight: bold;
+    color: #343a40;
+}
+
+.landing div{
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.landing div div{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1rem;
+
+}
+
+.landing div div button{
+    box-shadow: 0 8px 6px -6px black;
+    background-color: #343a40;
+}
