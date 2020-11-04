@@ -49,13 +49,15 @@ function mostrarDatos(){
     for (let i = 0; i<datosUsuario.length; i++){
             //Vamos a crear x cantidad de divs que appendearemos al div padre (#listaProductos)donde cada div mostrará: nombreproducto, cantidadproducto, precioproducto y boton "x"
 
-            let datosProducto = document.createElement("div")
-            document.querySelector("#listaProductos").appendChild(datosProducto)
-            datosProducto.innerHTML += datosUsuario[i].nombre
-            datosProducto.innerHTML += datosUsuario[i].cantidad
-            datosProducto.innerHTML += datosUsuario[i].precio
-            datosProducto.classList.add("col-12", "col-md-1")
-            datosProducto.style.maxWidth = "70%"
+            let datosProducto = document.createElement("div");
+            document.querySelector("#listaProductos").appendChild(datosProducto);
+            datosProducto.id = `producto-${i}`;
+            const nodoDato = document.querySelector(`#producto-${i}`)
+            nodoDato.insertAdjacentElement('beforebegin', `<span> </span>`);
+            datosProducto.innerHTML += datosUsuario[i].cantidad;
+            datosProducto.innerHTML += datosUsuario[i].precio;
+            datosProducto.classList.add("col-12");
+            datosProducto.style.maxWidth = "70%";
 
             
             //crear boton
@@ -71,23 +73,23 @@ function mostrarDatos(){
         }
        
     // document.querySelector("#numeral1").innerHTML = 1;
-    // document.querySelector("#nombreProducto1").innerHTML = datosUsuario[1].nombreUsuario;
-    // document.querySelector("#cantidadProducto1").innerHTML = datosUsuario[1].cantidadUsuario;
-    // document.querySelector("#precioProducto1").innerHTML = datosUsuario[1].precioUsuario;
+    // document.querySelector("#nombreProducto1").innerHTML = listadoDeProductos[1].nombre;
+    // document.querySelector("#cantidadProducto1").innerHTML = listadoDeProductos[1].cantidad;
+    // document.querySelector("#precioProducto1").innerHTML = listadoDeProductos[1].precio;
     
     // document.querySelector("#numeral2").innerHTML = 2;
-    // document.querySelector("#nombreProducto2").innerHTML = datosUsuario[2].nombreUsuario;
-    // document.querySelector("#cantidadProducto2").innerHTML = datosUsuario[2].cantidadUsuario;
-    // document.querySelector("#precioProducto2").innerHTML = datosUsuario[2].precioUsuario;
+    // document.querySelector("#nombreProducto2").innerHTML = listadoDeProductos[2].nombre;
+    // document.querySelector("#cantidadProducto2").innerHTML = listadoDeProductos[2].cantidad;
+    // document.querySelector("#precioProducto2").innerHTML = listadoDeProductos[2].precio;
 
     // document.querySelector("#numeral3").innerHTML = 3;
-    // document.querySelector("#nombreProducto3").innerHTML = datosUsuario[3].nombreUsuario;
-    // document.querySelector("#cantidadProducto3").innerHTML = datosUsuario[3].cantidadUsuario;
-    // document.querySelector("#precioProducto3").innerHTML = datosUsuario[3].precioUsuario;
+    // document.querySelector("#nombreProducto3").innerHTML = listadoDeProductos[3].nombre;
+    // document.querySelector("#cantidadProducto3").innerHTML = listadoDeProductos[3].cantidad;
+    // document.querySelector("#precioProducto3").innerHTML = listadoDeProductos[3].precio;
     
 }
 mostrarDatos(); 
-// mostrarDatos()
+
 
 function borrarItem(){
     localStorage.removeItem('');
