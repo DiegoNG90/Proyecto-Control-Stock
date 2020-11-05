@@ -64,6 +64,7 @@ function mostrarDatos(){
                 // borrar.style.textAlign = "center";
                 borrar.className = `btn btn-eliminar${i+1}`;
                 borrar.classList.add("border-white");
+                borrar.classList.add("btn-eliminar1");
                 
                 
 
