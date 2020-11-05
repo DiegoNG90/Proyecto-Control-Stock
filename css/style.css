@@ -6,26 +6,36 @@
 
 .botonAgregar{
     color: white;
+   
+}
+
+a:hover {
+    color: white;
 }
 
 .botonLista{
     color: white;
 }
 
-.btn-eliminar1{
-    /* display: none; */
+.btn-eliminar{
     background-color: red;
     color: white;
 }
 
-.btn-eliminar2{
-    /* display: none; */
+/* .btn-eliminar2{
     background-color: red;
     color: white;
 }
 
 .btn-eliminar3{
-    /* display: none; */
     background-color: red;
     color: white;
+} */
+
+#tabla{
+    text-align: center;
+}
+
+#contenido{
+    text-align: center;
 }
