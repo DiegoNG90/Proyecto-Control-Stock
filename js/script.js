@@ -47,28 +47,55 @@ function mostrarDatos(){
     
 
     for (let i = 0; i<datosUsuario.length; i++){
-            //Vamos a crear x cantidad de divs que appendearemos al div padre (#listaProductos)donde cada div mostrará: nombreproducto, cantidadproducto, precioproducto y boton "x"
+            //Trabajamos con tablas
 
-            let datosProducto = document.createElement("div");
-            document.querySelector("#listaProductos").appendChild(datosProducto);
-            datosProducto.id = `producto-${i}`;
-            const nodoDato = document.querySelector(`#producto-${i}`)
-            nodoDato.insertAdjacentElement('beforebegin', `<span> </span>`);
-            datosProducto.innerHTML += datosUsuario[i].cantidad;
-            datosProducto.innerHTML += datosUsuario[i].precio;
-            datosProducto.classList.add("col-12");
-            datosProducto.style.maxWidth = "70%";
+            //Crear tr (Producto)
+            let datosProducto = document.createElement("tr");
+            document.querySelector("#contenido").appendChild(datosProducto);
+            datosProducto.id = `producto-${i+1}`;
+            
+                let numero = document.createElement("th");
+                let nombre = document.createElement("th");
+                let cantidad = document.createElement("th");
+                let precio = document.createElement("th");
+                let borrar = document.createElement("button");
+                borrar.type = "button";
+                borrar.innerText = "X";
+                borrar.style.textAlign = "center";
+                borrar.className = `btn btn-eliminar${i+1}`;
+
+
+                document.querySelector(`#producto-${i+1}`).appendChild(numero);
+                document.querySelector(`#producto-${i+1}`).appendChild(nombre);
+                document.querySelector(`#producto-${i+1}`).appendChild(cantidad);
+                document.querySelector(`#producto-${i+1}`).appendChild(precio);
+                document.querySelector(`#producto-${i+1}`).appendChild(borrar);
+
+                numero.innerText = i+1;
+                nombre.innerText = datosUsuario[i].nombre;
+                cantidad.innerText = datosUsuario[i].cantidad;
+                precio.innerText = datosUsuario[i].precio;
+            
+
+
+
+            // const nodoDato = document.querySelector(`#producto-${i+1}`)
+            // nodoDato.insertAdjacentElement('beforebegin', `<div> ${datosUsuario[i].nombre} </div>`);
+            // datosProducto.innerHTML += datosUsuario[i].cantidad;
+            // datosProducto.innerHTML += datosUsuario[i].precio;
+            // datosProducto.classList.add("col-12");
+            // datosProducto.style.maxWidth = "70%";
 
             
-            //crear boton
-            let botonEliminar = document.createElement("button");
-            botonEliminar.classList.add("btn","btn-eliminar1");
-            botonEliminar.innerHTML = "X";
-            datosProducto.appendChild(botonEliminar)
+            // //crear boton
+            // let botonEliminar = document.createElement("button");
+            // botonEliminar.classList.add("btn","btn-eliminar1");
+            // botonEliminar.innerHTML = "X";
+            // datosProducto.appendChild(botonEliminar)
 
-            //crear salto de linea con linea
-            // let saltoDeLinea = document.createElement("hr");
-            datosProducto.innerHTML += `<br>`;
+            // //crear salto de linea con linea
+            // // let saltoDeLinea = document.createElement("hr");
+            // datosProducto.innerHTML += `<br>`;
             
         }
        
