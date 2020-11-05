@@ -61,8 +61,11 @@ function mostrarDatos(){
                 let borrar = document.createElement("button");
                 borrar.type = "button";
                 borrar.innerText = "X";
-                borrar.style.textAlign = "center";
+                // borrar.style.textAlign = "center";
                 borrar.className = `btn btn-eliminar${i+1}`;
+                borrar.classList.add("border-white");
+                
+                
 
 
                 document.querySelector(`#producto-${i+1}`).appendChild(numero);
