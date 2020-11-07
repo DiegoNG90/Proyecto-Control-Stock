@@ -4,6 +4,7 @@
 font-family: 'Pacifico', cursive;
 font-family: 'Ubuntu', sans-serif;
 */
+
 body{
     font-family: 'Ubuntu', sans-serif;
 
@@ -50,16 +51,17 @@ body{
 
 .landing div{
     justify-content: center;
-    align-items: center;
 }
 
 .landing div div{
         display: flex;
         flex-flow: column nowrap;
-        justify-content: center;
-        align-items: center;
+        justify-content: center;      
         margin-bottom: 1rem;
 
+}
+.button-landing{
+    align-items: center;
 }
 
 
@@ -68,6 +70,7 @@ body{
     box-shadow: 0 8px 6px -6px black;
     color: black;
     background-color: #ffffff;
+    border-color: #6c757d; 
 }
 .landing div div button:hover{
     
@@ -78,19 +81,65 @@ body{
 
 
 /* LOGIN */
-.container {
-    margin-top: 5rem;
-    width: 40%;
+.formu-login{
+    margin: 0 auto;
 }
+
+#titulo-login{
+   text-align: center;
+   margin-top: 5rem;
+}
+.contenedor-login{
+    background-color: #5a5a5abe;
+    width: 60%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    color: #ffffff;
+}
+
+.formu-login div div button{
+    color: black;
+    background-color: #ffffff;
+    margin-bottom: 1rem;
+    margin-left: 3rem;
+
+}
+
+.formu-login div div button:hover{
+    color: #ffffff;
+    background-color: #000000b2;
+
+}
+
+.formu-login div{
+    align-items: flex-start;
+}
+#log-in{
+align-self: flex-end;
+margin-right: 3rem;
+margin-top: 1rem;
+}
+
+#enviarYErrores p{
+    justify-content: center;
+}
+
+.form-group small{
+    color: #cacaca;
+    font-style:italic;
+}
+
 
 #enviarYErrores{
     display: flex;
     flex-flow: row wrap;
+    margin-bottom: 0;
 }
 
 #enviar{
-    flex: 0 50% 50%;
-    justify-content: center;
+    justify-content: flex-end;
+    width: 100%;
+    margin-bottom: 0;
 }
 
 #errores{
