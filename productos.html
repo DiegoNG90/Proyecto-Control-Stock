@@ -16,8 +16,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="#">Agregar +<span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="#">Productos</a>
+            <a class="nav-item nav-link" href="#">Agregar +</a>
+            <a class="nav-item nav-link active" href="#">Productos<span class="sr-only">(current)</span></a>
           </div>
         </div>
       </nav>
@@ -27,28 +27,49 @@
         
     <h1>Productos</h1>
     
-    <button type="button" class="btn btn-success">Agregar +</button> 
-    <button type="button" class="btn btn-danger">Eliminar todo</button>
+    <button type="button" class="btn btn-success"><a class="botonAgregar" href="agregarProductos.html">Agregar +</a></button>
+    <button type="button" class="btn btn-danger">Eliminar todo</button><br/>
 
-    <div class="row">
-        <div class="col-12 col-md-1">
-            #
-        </div>
-    <div class="col-12 col-md-5">
-        Nombre del producto
-    </div>
-    <div class="col-12 col-md-3">
-       Cantidad
-    </div>
-    <div class="col-12 col-md-3">
-        Precio
-    </div>
-</div>
+    
+    <table class="table table-striped table-dark table-hover">
+      <br/>
+      <thead id="tabla">
+        <tr>
+          <th scope="col"  class="bg-primary">#</th>
+          <th scope="col"  class="bg-primary">Producto</th>
+          <th scope="col"  class="bg-primary">Cantidad</th>
+          <th scope="col"  class="bg-primary">Precio</th>
+          <th scope="col"  class="bg-primary">Eliminar</th>
+        </tr>
+      </thead>
+      
+        
+      <tbody id="contenido">
+        <!-- <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Larry</td>
+          <td>the Bird</td>
+          <td>@twitter</td>
+        </tr> -->
+      </tbody>
+    </table>
 
 </section>
 </div>
 
-<script src="js/script.js"></script>
+<script src="js/funciones.js"></script>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
