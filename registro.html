@@ -15,8 +15,8 @@
 </head>
 <body>
     
-    <div class="container"  id="main-registro">
-     
+    <div class="container-fluid landing"  id="main-registro">
+        <div class="contenedor-login">
         <h1>Registrarse</h1>
         <p>Utilice una cuenta propia de email como nombre de usuario.</p>
         
@@ -24,23 +24,23 @@
             <div class="form-group">
                 <label for="exampleInputEmail1">Ingrese su email/usuario</label>
                 <input type="email" class="form-control" id="crearEmail" aria-describedby="emailHelp">
-                <small id="emailHelp" class="form-text text-muted">Su mail no será usado para compartir informacion a terceros.</small>
+                <small id="emailHelp" class="form-text">Su mail no será usado para compartir informacion a terceros.</small>
             </div>
 
             <div class="form-group">
                 <label for="exampleInputPassword1">Password</label>
                 <input type="password" class="form-control" id="crearPassword" aria-describedby="password">
-                <small id="password" class="form-text text-muted">Ingrese su password</small>
+                <small id="password" class="form-text">Ingrese su password</small>
             </div>
 
             <div class="form-group">
                 <label for="exampleInputPassword1">Confirmar Password</label>
                 <input type="password" class="form-control" id="confirmarPassword" aria-describedby="confirm-password">
-                <small id="confirm-password" class="form-text text-muted">Confirme su password</small>
+                <small id="confirm-password" class="form-text">Confirme su password</small>
             </div>
             <div id="registrarse">
     
-                <button type="submit" class="btn btn-primary" id="btn-registrarse">Registrarse</button>
+                <button type="submit" class="btn" id="btn-registrarse">Registrarse</button>
                 <ul id="registro-errores">
 
                 </ul>
@@ -52,7 +52,7 @@
     <div id="esExito" class="container oculto">
         <h2>Te has registrado exitosamente! Ahora podrás loggearte e ingresar a la plataforma.</h2>
     </div>
-
+</div>
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
