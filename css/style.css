@@ -201,3 +201,38 @@ margin-top: 1rem;
     background-color: #000000b2;
 
 }
+
+
+/*Julk*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.botonAgregar{
+    color: white;
+   
+}
+
+a:hover {
+    color: white;
+}
+
+.botonLista{
+    color: white;
+}
+
+.btn-eliminar1{
+    background-color: red;
+    color: white;
+}
+
+#tabla{
+    text-align: center;
+}
+
+#contenido{
+    text-align: center;
+}
