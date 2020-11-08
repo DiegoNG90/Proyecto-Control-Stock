@@ -172,6 +172,8 @@ margin-top: 1rem;
 
     border: 2px solid red;
 }
+
+/*Texto que sale con un error*/
 .error-texto{
     color: red;
     list-style: none;
