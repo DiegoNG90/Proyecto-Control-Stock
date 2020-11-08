@@ -5,5 +5,5 @@ const $cerrarSesion = document.querySelector('#cerrarSesion');
 $cerrarSesion.onclick = function (e){
     e.preventDefault();
     localStorage.removeItem('LOGIN');
-    window.location.href = "login.html";
+    window.location.href = "index.html";
 }
