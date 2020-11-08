@@ -71,21 +71,21 @@ $nodoBotonLogIn.onclick = function (e){
                 error.innerText = "El password es incorrecto."
                 $('#inputPassword')[0].className = 'error-input';
                 $('#inputEmail')[0].className = 'form-control';
-                break;
+                // break;
             }
             //Si el pass coincide pero el mail no:
             else if($nodoMail !== mails[i] && $nodoPass === pass[i]){
                 error.innerText = "El mail/usuario es incorrecto."
                 $('#inputEmail')[0].className = 'error-input';
                 $('#inputPassword')[0].className = 'form-control';
-                break;
+                // break;
             } 
             // Si el mail y el pass no coinciden
             else if($nodoMail !== mails[i] && $nodoPass !== pass[i]){
                 error.innerText = "El mail/usuario y la contraseña no existen."
                 $('#inputPassword')[0].className = 'error-input';
                 $('#inputEmail')[0].className = 'error-input';
-                break;
+                // break;
             }
             else{
                 continue;
