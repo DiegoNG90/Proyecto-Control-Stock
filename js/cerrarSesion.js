@@ -1,9 +1,6 @@
-console.log("Index.js linkeado a index.html (INVENTARIO)");
+console.log("Cerrar sesión linkeado a productos.html y agregarProductos.html");
 
-const $cerrarSesion = document.querySelector('#cerrarSesion');
-
-$cerrarSesion.onclick = function (e){
-    e.preventDefault();
+function cerrarSesion(){
     localStorage.removeItem('LOGIN');
     window.location.href = "index.html";
 }
