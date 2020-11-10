@@ -6,7 +6,8 @@ listadoDeProductos = JSON.parse(localStorage.getItem("listadoDeProductos"));
 console.log(listadoDeProductos);
 
 
-function guardarDatos(){
+function guardarDatos(e){
+    e.preventDefault();
     let campoNombre1 = document.querySelector("#nombre");
     let campoCantidad1 = document.querySelector("#cantidad");
     let campoPrecio1 = document.querySelector("#precio");
@@ -37,14 +38,8 @@ function guardarDatos(){
         campoNombre1.value = "";
         campoCantidad1.value = "";
         campoPrecio1.value = "";
-    
     }
-
-
-
-  
-
-
+    campoNombre1.focus();
 }
 
 
