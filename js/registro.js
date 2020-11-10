@@ -65,9 +65,9 @@ $botonRegistro.onclick = function(e){
             //Subo al newUser al LS
             // localStorage.setItem('newUser', JSON.stringify(newUser));
             
-            $('#main-registro')[0].className = "oculto";
+            $('.contenedor-login')[0].className = "oculto";
             $('#esExito')[0].classList.remove('oculto');
-            $('body')[0].style.backgroundColor = "#311c1c";
+            $('body')[0].style.backgroundColor = "#5a5a5abe";
 
             redireccionar();
         }
@@ -75,11 +75,7 @@ $botonRegistro.onclick = function(e){
 }
 
 function redireccionar(){
-    setTimeout(function(){window.location.href = "login.html";}, 2500);
-}
-
-function exportarUsersRegistrados(){
-
+    setTimeout(function(){window.location.href = "login.html";}, 5500);
 }
 
 function chequearYBorrarErrores(input){
