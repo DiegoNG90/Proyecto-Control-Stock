@@ -15,7 +15,8 @@ $nodoBotonLogIn.onclick = function (e){
     const $nodoMail = $('#inputEmail')[0].value;
     const $nodoPass = $('#inputPassword')[0].value;
     const $errores = $('#errores')[0];
-    
+    if($nodoMail===""||$nodoPass===""){alert("Favor de completar todos los campos")}
+    else{    
     const ALLUSERS = JSON.parse(localStorage.getItem('ALLUSERS'));
     const mails = [];
     const pass = [];
@@ -100,7 +101,7 @@ $nodoBotonLogIn.onclick = function (e){
                 }
             }  
         }    
-
+    }
     }
 
     

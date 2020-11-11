@@ -10,6 +10,9 @@ $botonRegistro.onclick = function(e){
     const contraseñaUNuevo = $('#crearPassword')[0].value;
     const confirmaContraseñaUNuevo = $('#confirmarPassword')[0].value;
     const erroresRegistro = $('#registro-errores')[0];
+    if (usuarioNuevo===""|| contraseñaUNuevo===""||confirmaContraseñaUNuevo===""){
+        alert("Favor de completar todos los campos");
+    }else{
     //borrar errores previos
     chequearYBorrarErrores(erroresRegistro);
     //Iterar la array
@@ -71,6 +74,7 @@ $botonRegistro.onclick = function(e){
 
             redireccionar();
         }
+    }
     }
 }
 
