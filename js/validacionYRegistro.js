@@ -1,6 +1,3 @@
-console.log("Linkeado al index.html")
-console.log("Linkeado al login.html")
-
 //SI! AHORA SI!
 let ALLUSERS = [];
 ALLUSERS = JSON.parse(localStorage.getItem('ALLUSERS'));
