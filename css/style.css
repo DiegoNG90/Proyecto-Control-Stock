@@ -170,14 +170,21 @@ margin-top: 1rem;
     /* border: 1px solid #ced4da; */
     border-radius: .25rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-
     border: 2px solid red;
 }
 
 /*Texto que sale con un error*/
 .error-texto{
-    color: red;
+    color:white;
     list-style: none;
+    background-color:#ff0000;
+    border: #5a5a5abe;
+    
+    text-align: center;
+    padding: 0.8rem;
+    border-radius: 3rem;
+    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+
 }
 
 ul{
@@ -212,6 +219,11 @@ margin-top: 1rem;
 
 }
 
+/*Estilo formulario agregarProducto*/
+.formulario-agregar{
+    margin: 0 auto;
+    text-align: center;
+}
 
 /*Julk*/
 
