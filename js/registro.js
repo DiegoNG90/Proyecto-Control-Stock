@@ -18,7 +18,9 @@ $botonRegistro.onclick = function(e){
     //1) si el mail no es válido:
     if (mailValido(usuarioNuevo) === false) {
         erroresRegistro.innerText = "El mail es inválido. Revise que cumpla la estructura 'usuario@servidor.com'"
-            $('#crearEmail')[0].className = 'error-texto';
+            $('#crearEmail')[0].className = 'error-input';
+            erroresRegistro.className = 'error-texto';
+            
     }else{
         
         chequearMailExistente(chequearYBorrarErrores, erroresRegistro, usuarioNuevo);
