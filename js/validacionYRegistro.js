@@ -58,12 +58,12 @@ $nodoBotonLogIn.onclick = function (e){
                 if (!$nodoMail || !$nodoPass) {
                     //Si ambos están vacíos
                     if (!$nodoMail && !$nodoPass) {
-                        error.innerText = "El mail/usuario y la contraseña están incompletos."
+                        error.innerText = "El mail y la contraseña están incompletos."
                         $('#inputPassword')[0].className = 'error-input';
                         $('#inputEmail')[0].className = 'error-input';
                         break;
                     } else if (!$nodoMail && $nodoPass !== "") {
-                        error.innerText = "El mail/usuario está incompleto."
+                        error.innerText = "El mail está incompleto."
                         $('#inputMail')[0].className = 'error-input';
                         break;
                     }else{
@@ -81,14 +81,14 @@ $nodoBotonLogIn.onclick = function (e){
                 }
                 //Si el pass coincide pero el mail no:
                 else if($nodoMail !== mails[i] && $nodoPass === pass[i]){
-                    error.innerText = "El mail/usuario es incorrecto."
+                    error.innerText = "El mail es incorrecto."
                     $('#inputEmail')[0].className = 'error-input';
                     $('#inputPassword')[0].className = 'form-control';
                     // break;
                 } 
                 // Si el mail y el pass no coinciden
                 else if($nodoMail !== mails[i] && $nodoPass !== pass[i]){
-                    error.innerText = "El mail/usuario y la contraseña no existen."
+                    error.innerText = "El mail y la contraseña no existen."
                     $('#inputPassword')[0].className = 'error-input';
                     $('#inputEmail')[0].className = 'error-input';
                     // break;

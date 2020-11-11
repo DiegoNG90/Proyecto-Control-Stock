@@ -108,7 +108,7 @@ function chequearMailExistente(chequearYBorrarErrores, erroresRegistro,usuarioNu
 
             let errorRegistro = document.createElement("li");
             errorRegistro.classList.add('error-texto');
-            errorRegistro.innerText = "El mail/usuario ya está en uso. Ingrese otro mail para registrarse."
+            errorRegistro.innerText = "El mail ya está en uso. Ingrese otro mail para registrarse."
             $('#crearEmail')[0].className = 'error-input';
 
             erroresRegistro.appendChild(errorRegistro);
