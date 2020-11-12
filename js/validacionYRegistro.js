@@ -21,9 +21,10 @@ $nodoBotonLogIn.onclick = function (e){
     if(ALLUSERS === null){
         const titulo = $('#titulo-login')[0];
         titulo.innerText = "No hay usuarios registrados. En breve será redireccionado a la pagina de registro para crear su usuario.";
-        titulo.style.color = "red";
-        document.body.style.backgroundColor = "#311c1c";
-        document.querySelector('form').className = "oculto"
+        titulo.style.color = "#ffffff";
+        titulo.style.textShadow="1px 1px 1px rgb(95, 95, 95)";
+        titulo.style.textAlign="center";
+        document.querySelector('form').className = "oculto";
         redireccionar();
     }else{
         for(let i=0; i < ALLUSERS.length; i++){
