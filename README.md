@@ -29,20 +29,20 @@ El programa se divide en dos partes principales: la landing page, donde el usuar
 #### 1. Landing page e interfaz de log-in
 Index.html es la página de **bienvenida** a STOCKEATE donde el usuario tendrá dos caminos posibles: iniciar sesión o registrarse.
 
-* Iniciar Sesion: tal como explica su nombre, acá el usuario podrá loguearse. En caso que no haya ningún usuario creado -en el local storage- y el usuario intente loguearse a pesar de ésto, será automáticamente redirigido a la pagina de registro. En caso que ya haya completado éste paso, iniciar sesión posee algunas *validaciones simples* hechas harcodeado con vainilla JS y algunas expresiones en jQuery (más que nada, supliendo el comando document.querySelector). 
+* Iniciar Sesion: tal como explica su nombre, acá el usuario podrá loguearse. En caso que no haya ningún usuario creado -en el local storage- y el usuario intente loguearse a pesar de ésto, será automáticamente redirigido a la pagina de registro. En caso que ya haya completado éste paso, iniciar sesión posee algunas *validaciones simples* hechas harcodeado con vainilla JS y algunas expresiones en jQuery (más que nada, supliendo el comando document.querySelector). Para más información, mirar la sección *### ESTRUCTURA DE CONTROL* del readme.md.
 *El código que controla ésta dinámica se aloja en validaciónYRegistro.js.*
 
 * Registro: en ésta pantalla, el usuario podrá crearse un usuario en base a una cuenta de e-mail. Para ello, ingresará esa cuenta y luego creará un password. En ésta parte habrá **dos validaciones** principales:
     1. Que el dato ingresado en el campo mail contenga una estructura acorde a la estructura de un email.
     2. Que las constraseñas coincidan (*no hay mínimo o máximo de caracteres ni validaciones alfanuméricas*).
-Finalmente, una vez registrado, el usuario será automáticamente redirigido a la página de inicio de sesión, previo mensaje de aviso que el registro fue exitoso, para que ingrese los datos del usuario creado para acceder a la matriz/interfaz del inventario.
+Finalmente, una vez registrado, el usuario será automáticamente redirigido a la página de inicio de sesión, previo mensaje de aviso que el registro fue exitoso, para que ingrese los datos del usuario creado para acceder a la matriz/interfaz del inventario. Asimismo, ese dato será guardado en el local storage (como objeto, dentro de una array llamada *ALLUSERS*, en el local storage).
 *El código que controla ésta dinámica se aloja en registro.js.*
 
 
 #### 2. Matriz/Interfaz de inventario
 Fundamentalmente contenida en agregarProductos.html (para la carga de productos) y productos.html(para la visualización del listado de productos), ésta parte del programa estuvo fundamentalmente diseñada funcionalmente en los archivos funciones.js y mostrarProductos.js.
 
-* Carga de productos: una vez que el usuario se ha registrado y logueado exitosamente, el usuario ingresará a agregarProductos.html donde encontrará una simple interfaz que presenta un formulario con 3 campos a completar con los valores que el prodcuto exige (el nombre, la cantidad y el precio). Completados los campos, será necesario oprimir el botón "Agregar Productos" para que el dato/producto sea guardado (como objeto, dentro de una array, en el local storage).
+* Carga de productos: una vez que el usuario se ha registrado y logueado exitosamente, el usuario ingresará a agregarProductos.html donde encontrará una simple interfaz que presenta un formulario con 3 campos a completar con los valores que el prodcuto exige (el nombre, la cantidad y el precio). Completados los campos, será necesario oprimir el botón "Agregar Productos" para que el dato/producto sea guardado (como objeto, dentro de una array llamada *listadoDeProductos*, en el local storage).
 Asimismo, el usuario cuenta con la posibilidad de chequear el listado de productos en todo momento, oprimiento el botón "Ver Lista". 
 *El código que controla ésta dinámica se aloja en funciones.js.*
 
@@ -56,17 +56,23 @@ Desde ésta pantalla, el usuario tiene la posibilidad de:
 //FALTA: Seguir completando
 
 ### Estructura de control
-siLogin.js noLogin.js (deprecado, alojado en .gitignore)
+En ésta sección hablaremos principalmente de dos archivos de control: *siLogin.js* y *cerrarSesion.js*.
+
+Además de *ALLUSERS* y *listadoDeProductos*, hay una tercer key alojada en el local storage.
+Esta key, llamada *LOGIN* -cuyo valor es el booleano **true**) se guarda en el local storage cuando el usuario ingresa su usuario -mail- y contraseña de manera exitosa (se crea desde el archivo *validacionYRegistro.js*).
+
+Ésta key trabaja desde el archivo "siLogin.js"; basicamente, mientras el usuario *está logueado* (es decir, mientras la key LOGIN: true existe), si el usuario intenta manualmente volver al index.html (landing page), al login.html o al registro.html (escribiendolo manualmente en la ruta del navegador o con la flecha de *atras/volver*), el script lo impide (redirigiendole a la pagina actual), siendo la única manera de volver atras oprimiendo el boton "Cerrar sesion" (ver archivo *cerrarSesion.js*) alojado en el navbar de las paginas agregarProducto.html y productos.html.
 
 
 
-Prueba enlace web (**BORRAR**)
-[(https://www.google.com)]
+**(Cabe aclarar que si el usuario es experimentado en la programación y en el uso de la consola, muchas de éstas operaciones pueden ser fácilmente ejecutadas desde la consola).**
 
-Prueba enlace web 2:
-[Soy un enlace de estilo en línea con título] (https://www.google.com "Página de inicio de Google")
+Por cualquier duda, contactanos.
 
-[(https://www.google.com "Página de inicio de Google")]
+Colaboradores y sus repositorios:
+## Joaquin Perrier: https://github.com/JoaquinPerrier
+## Julian Cano: https://github.com/Julkcg
+## Diego Gándara: https://github.com/DiegoNG90
 
 
 
